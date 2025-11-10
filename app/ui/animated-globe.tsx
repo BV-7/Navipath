@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { useEffect, useRef, useState } from "react";
 import Globe from "react-globe.gl";
@@ -13,7 +13,7 @@ export default function HeroGlobe() {
       if (!containerRef.current) return;
 
       const parentWidth = containerRef.current.offsetWidth;
-      const boundedWidth = Math.min(Math.max(parentWidth * 0.8, 480), 550);
+      const boundedWidth = 600;
 
       setSize({ width: boundedWidth, height: boundedWidth });
     };
@@ -33,8 +33,7 @@ export default function HeroGlobe() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex justify-center items-center py-10 overflow-hidden"
-      style={{position:'relative',left:'5.8vw', margin:'0 0 0 0'}}
+      className="relative w-full flex justify-center items-center py-10 left-[5.8vw] m-0"
     >
         <Globe
           ref={globeEl}
